@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: game-pod
+  namespace: qa
+spec:
+  containers:
+  - name: game
+    image: pengbai/docker-supermario
+    ports:
+      - containerPort: 8080
+
