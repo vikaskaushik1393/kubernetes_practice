@@ -1,12 +1,14 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: game-pod
-  namespace: qa
+  name: nginx
+  labels:
+    app: nginx
 spec:
   containers:
-  - name: game
-    image: pengbai/docker-supermario
+  - name: nginx
+    image: nginx:latest
     ports:
-      - containerPort: 8080
+      - containerPort: 80
+
 
